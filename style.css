@@ -356,6 +356,22 @@ code {
   color: var(--text-faint);
 }
 
+.footer__link {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-dim);
+}
+
+.footer__link:hover {
+  border-bottom-color: var(--accent);
+}
+
+.footer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .btn {
   font-family: var(--font-mono);
   font-size: 13.5px;
@@ -366,12 +382,23 @@ code {
   border-radius: 8px;
   font-weight: 600;
   white-space: nowrap;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(79, 227, 184, 0.25);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent-soft-border);
+}
+
+.btn--ghost:hover {
+  background: var(--accent-soft);
+  box-shadow: none;
 }
 
 /* ============ reveal-on-scroll ============ */
