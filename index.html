@@ -1,230 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Эдуард Данилов — Manual QA Engineer</title>
-<meta name="description" content="Резюме Manual QA Engineer — Эдуард Данилов. Функциональное, регрессионное и API-тестирование B2B веб-систем.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Manual QA Engineer — Эдуард Данилов. Функциональное, регрессионное и API-тестирование веб-приложений. Краснодар.">
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#fff; --text:#16181d; --muted:#5d6572; --line:#e3e6eb;
+    --accent:#2f6fed; --accent-soft:#e8effd;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f1115; --card:#171a21; --text:#eceef2; --muted:#9aa3b2; --line:#262b35; --accent:#6c9bff; --accent-soft:#1c2740; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:32px 16px 56px}
+  header{margin-bottom:24px}
+  .status{display:inline-block;font-size:13px;color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:999px;margin-bottom:12px}
+  h1{font-size:34px;line-height:1.15;margin:0}
+  .role{font-size:19px;color:var(--muted);margin:4px 0 16px}
+  .facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;padding:0;list-style:none;font-size:15px;color:var(--muted)}
+  .facts b{color:var(--text);font-weight:600}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .btn{display:inline-block;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--accent);color:var(--accent)}
+  .btn.primary{background:var(--accent);color:#fff}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-top:16px}
+  h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+  p{margin:0}
+  ul{margin:0;padding-left:20px}
+  li{margin:6px 0}
+  .job{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 12px;margin-bottom:10px}
+  .job strong{font-size:17px}
+  .job span{color:var(--muted);font-size:15px}
+  h3{font-size:14px;margin:16px 0 4px;color:var(--accent)}
+  .skills{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;margin:0}
+  .skills dt{color:var(--muted);font-size:15px}
+  .skills dd{margin:0}
+  .tag{display:inline-block;background:var(--accent-soft);color:var(--text);border-radius:6px;padding:1px 8px;margin:2px 4px 2px 0;font-size:14px}
+  @media (max-width:560px){
+    h1{font-size:28px}
+    .skills{grid-template-columns:1fr;gap:2px}
+    .skills dd{margin-bottom:10px}
+  }
+</style>
 </head>
 <body>
-
-<div class="grain"></div>
-
 <main>
-
-  <!-- ===== HEADER / REPORT META ===== -->
-  <header class="hero">
-    <div class="hero__inner">
-      <div class="status">
-        <span class="status__dot" aria-hidden="true"></span>
-        <span class="status__text">Открыт к предложениям</span>
-      </div>
-
-      <h1 class="hero__name">Эдуард Данилов</h1>
-      <p class="hero__role">Manual QA Engineer</p>
-
-      <div class="meta">
-        <div class="meta__item">
-          <span class="meta__label">Локация</span>
-          <span class="meta__value">Краснодар</span>
-        </div>
-        <div class="meta__item">
-          <span class="meta__label">Формат</span>
-          <span class="meta__value">удалённо / гибрид / офис</span>
-        </div>
-        <div class="meta__item">
-          <span class="meta__label">Занятость</span>
-          <span class="meta__value">полная</span>
-        </div>
-        <div class="meta__item">
-          <span class="meta__label">Опыт</span>
-          <span class="meta__value">3 года</span>
-        </div>
-      </div>
+  <header>
+    <span class="status">Открыт к предложениям</span>
+    <h1>Эдуард Данилов</h1>
+    <p class="role">Manual QA Engineer</p>
+    <ul class="facts">
+      <li><b>Краснодар</b></li>
+      <li>Удалённо / офис</li>
+      <li>Полная занятость</li>
+      <li>Опыт <b>3 года</b></li>
+    </ul>
+    <div class="cta">
+      <a class="btn primary" href="mailto:eduard-danilov-1999@mail.ru">Написать на email</a>
+      <a class="btn" href="https://t.me/Eduard7522">Telegram</a>
     </div>
   </header>
 
-  <!-- ===== PROFILE ===== -->
-  <section class="section" id="profile">
-    <p class="eyebrow">профиль</p>
-    <h2 class="section__title">Кто я</h2>
-    <div class="prose">
-      <p>Manual QA Engineer с <strong>3 годами</strong> практического опыта тестирования веб- и B2B-систем. Основной профиль — функциональное, интеграционное, регрессионное, smoke- и API-тестирование на всех этапах цикла: от анализа задачи и подготовки тестов до проверки исправлений и регресса.</p>
-      <p>Самостоятельно декомпозирую требования, нахожу неоднозначности, составляю тест-кейсы и чек-листы, воспроизвожу дефекты, определяю приоритет и серьёзность. Проверяю REST API через Postman/Swagger, работаю с SQL в PostgreSQL, использую DevTools для анализа сетевых запросов. Знаком с GitLab, CI/CD, Docker/Kubernetes на уровне, необходимом для QA-практики.</p>
-    </div>
+  <section>
+    <h2>Кратко</h2>
+    <p>Функциональное, регрессионное и API-тестирование веб-приложений. Проверяю не только интерфейс, но и API и базу данных, поэтому точнее нахожу причину дефекта. Работаю в Postman, Swagger, DevTools и SQL. Пишу понятные баг-репорты.</p>
   </section>
 
-  <!-- ===== EXPERIENCE ===== -->
-  <section class="section" id="experience">
-    <p class="eyebrow">опыт работы</p>
-    <h2 class="section__title">Проектная IT-команда</h2>
-    <p class="section__subtitle">B2B веб-платформа / корпоративная информационная система</p>
-
-    <div class="job-meta">
-      <span>Manual QA Engineer</span>
-      <span class="dot-sep">·</span>
-      <span>проектная работа по ГПХ</span>
-      <span class="dot-sep">·</span>
-      <span class="mono">2023 — 2026</span>
+  <section>
+    <h2>Опыт</h2>
+    <div class="job">
+      <strong>Manual QA Engineer · B2B Corporate Finance Platform</strong>
+      <span>июнь 2023 — июнь 2026 · 3 года</span>
     </div>
-
-    <p class="prose__lead">B2B-система для корпоративных пользователей: личные кабинеты, роли и права доступа, справочники, заявки/операции, интеграции с внутренними и внешними сервисами. Разработка по Agile; задачи и дефекты — через трекер, требования и документация — в базе знаний. В QA-команде несколько тестировщиков, работа совместно с разработчиками, аналитиками и продакт-менеджером.</p>
-
-    <div class="checklist-group">
-      <h3 class="checklist-group__title">Анализ и тест-дизайн</h3>
-      <ul class="checklist">
-        <li><span class="check" aria-hidden="true">✓</span>Анализировал требования, acceptance criteria и пользовательские сценарии до начала тестирования; декомпозировал их на позитивные, негативные и граничные</li>
-        <li><span class="check" aria-hidden="true">✓</span>Создавал и поддерживал test cases, checklists и тестовые наборы в TestRail</li>
-      </ul>
-    </div>
-
-    <div class="checklist-group">
-      <h3 class="checklist-group__title">Тестирование</h3>
-      <ul class="checklist">
-        <li><span class="check" aria-hidden="true">✓</span>Проводил smoke, функциональное, регрессионное, интеграционное, UI и кросс-браузерное тестирование</li>
-        <li><span class="check" aria-hidden="true">✓</span>Тестировал REST API (<code>GET</code> <code>POST</code> <code>PUT</code> <code>PATCH</code> <code>DELETE</code>): параметры, headers, body, авторизацию, коды ответа и структуру JSON — через Postman и Swagger/OpenAPI</li>
-        <li><span class="check" aria-hidden="true">✓</span>Проверял данные в PostgreSQL через DBeaver (<code>SELECT</code> <code>WHERE</code> <code>JOIN</code> <code>ORDER BY</code> <code>GROUP BY</code>)</li>
-        <li><span class="check" aria-hidden="true">✓</span>Использовал Chrome DevTools (Console, Network) и, при необходимости, Charles Proxy для анализа HTTP/HTTPS-трафика</li>
-        <li><span class="check" aria-hidden="true">✓</span>Выполнял UAT-проверки и помогал готовить функциональность к релизу</li>
-      </ul>
-    </div>
-
-    <div class="checklist-group">
-      <h3 class="checklist-group__title">Дефекты и коммуникация</h3>
-      <ul class="checklist">
-        <li><span class="check" aria-hidden="true">✓</span>Оформлял bug reports (шаги воспроизведения, факт/ожидание, окружение, severity, priority) в Jira; проверял исправления и проводил регресс затронутой функциональности</li>
-        <li><span class="check" aria-hidden="true">✓</span>Анализировал логи и техническую информацию для локализации причины дефекта; взаимодействовал с разработчиками и аналитиками при обсуждении требований и результатов</li>
-        <li><span class="check" aria-hidden="true">✓</span>Использовал GitLab для просмотра изменений, веток, merge request и результатов CI/CD</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== SKILLS ===== -->
-  <section class="section" id="skills">
-    <p class="eyebrow">стек</p>
-    <h2 class="section__title">Ключевые навыки</h2>
-
-    <div class="skill-block">
-      <h3 class="skill-block__title">Тестирование</h3>
-      <div class="tags">
-        <span class="tag">функциональное</span>
-        <span class="tag">smoke</span>
-        <span class="tag">regression</span>
-        <span class="tag">integration</span>
-        <span class="tag">UI</span>
-        <span class="tag">cross-browser</span>
-        <span class="tag">API/REST</span>
-        <span class="tag">UAT</span>
-        <span class="tag">exploratory</span>
-        <span class="tag">граничные значения</span>
-      </div>
-    </div>
-
-    <div class="skill-block">
-      <h3 class="skill-block__title">Документация</h3>
-      <div class="tags">
-        <span class="tag">test cases</span>
-        <span class="tag">checklists</span>
-        <span class="tag">test suites</span>
-        <span class="tag">test plan</span>
-        <span class="tag">bug reports</span>
-        <span class="tag">acceptance criteria</span>
-      </div>
-    </div>
-
-    <div class="skill-block">
-      <h3 class="skill-block__title">API</h3>
-      <div class="tags">
-        <span class="tag">Postman</span>
-        <span class="tag">Swagger/OpenAPI</span>
-        <span class="tag">REST</span>
-        <span class="tag">JSON</span>
-        <span class="tag">HTTP/HTTPS</span>
-        <span class="tag">status codes</span>
-        <span class="tag">headers</span>
-      </div>
-    </div>
-
-    <div class="skill-block">
-      <h3 class="skill-block__title">Базы данных</h3>
-      <div class="tags">
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">DBeaver</span>
-        <span class="tag">SQL</span>
-        <span class="tag">JOIN</span>
-        <span class="tag">подзапросы</span>
-      </div>
-    </div>
-
-    <div class="skill-block">
-      <h3 class="skill-block__title">Инструменты и инфраструктура</h3>
-      <div class="tags">
-        <span class="tag">Jira</span>
-        <span class="tag">Confluence</span>
-        <span class="tag">TestRail</span>
-        <span class="tag">Chrome DevTools</span>
-        <span class="tag">Charles Proxy</span>
-        <span class="tag">GitLab CI/CD</span>
-        <span class="tag">Docker</span>
-        <span class="tag">Kubernetes</span>
-        <span class="tag">Figma</span>
-        <span class="tag">Slack</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT ===== -->
-  <section class="section" id="about">
-    <p class="eyebrow">о себе</p>
-    <h2 class="section__title">Подход к работе</h2>
-    <div class="prose">
-      <p>Системно подхожу к тестированию: сначала разбираюсь в требованиях и бизнес-логике, затем определяю риски и покрытие, подбираю техники тест-дизайна и фиксирую результат. Для web-продуктов проверяю не только интерфейс, но и взаимодействие клиента с API и данные на стороне БД.</p>
-      <p>При спорном поведении не ограничиваюсь фиксацией симптома: собираю факты из UI, Network, API, БД и логов, чтобы помочь команде локализовать проблему. Спокойно работаю с большим количеством однотипных проверок и стараюсь сокращать рутину за счёт грамотных наборов тестов и повторяемых сценариев.</p>
-      <p>Изучаю и систематизирую профессиональный английский для QA: интерфейсы, требования, bug reports, test cases и техническая документация.</p>
-    </div>
-  </section>
-
-  <!-- ===== EDUCATION ===== -->
-  <section class="section" id="education">
-    <p class="eyebrow">образование</p>
-    <h2 class="section__title">Образование</h2>
-    <ul class="edu-list">
-      <li>
-        <span class="edu-list__main">Высшее образование — землеустройство и кадастр</span>
-        <span class="edu-list__sub">КубГТУ, Краснодар</span>
-      </li>
-      <li>
-        <span class="edu-list__main">Профессиональная переподготовка</span>
-        <span class="edu-list__sub">направление Software Testing</span>
-      </li>
-      <li>
-        <span class="edu-list__main">Курс Stepik</span>
-        <span class="edu-list__sub">«Тестирование ПО с нуля. Теория + Практика»</span>
-      </li>
+    <ul>
+      <li>Функциональное и регрессионное тестирование сценариев, форм и бизнес-логики.</li>
+      <li>API-тестирование в Postman и Swagger: REST, HTTP-статусы, позитивные и негативные сценарии.</li>
+      <li>Проверка данных и результатов операций через SQL.</li>
+      <li>Анализ запросов и ошибок в Chrome DevTools и Charles Proxy.</li>
+      <li>Тест-кейсы, чек-листы, баг-репорты, ретест и регресс после исправлений.</li>
+      <li>Проверка прав разных ролей на уровне UI и REST API.</li>
+    </ul>
+    <h3>Результаты</h3>
+    <ul>
+      <li>Проверяю функциональность сразу на трёх уровнях: UI, API и БД.</li>
+      <li>Локализую дефекты между клиентской и серверной частью с помощью Postman, DevTools и SQL.</li>
+      <li>Проверял критичные сценарии: валидацию данных, обработку ошибочных запросов, контроль прав доступа.</li>
     </ul>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="footer__report">
-      <span class="check check--lg" aria-hidden="true">✓</span>
-      <div>
-        <p class="footer__verdict">Готов к техническому интервью</p>
-        <p class="footer__note">eduard-danilov-1999@mail.ru &nbsp;·&nbsp; <a class="footer__link" href="https://t.me/Eduard7522" target="_blank" rel="noopener">t.me/Eduard7522</a></p>
-      </div>
-    </div>
-    <div class="footer__actions">
-      <a class="btn" href="mailto:eduard-danilov-1999@mail.ru">Написать на email</a>
-      <a class="btn btn--ghost" href="https://t.me/Eduard7522" target="_blank" rel="noopener">Telegram</a>
-    </div>
-  </footer>
+  <section>
+    <h2>Навыки</h2>
+    <dl class="skills">
+      <dt>Тестирование</dt>
+      <dd><span class="tag">функциональное</span><span class="tag">регрессионное</span><span class="tag">smoke</span><span class="tag">UI</span><span class="tag">API / REST</span></dd>
+      <dt>API</dt>
+      <dd><span class="tag">Postman</span><span class="tag">Swagger / OpenAPI</span><span class="tag">JSON</span><span class="tag">HTTP</span></dd>
+      <dt>Данные</dt>
+      <dd><span class="tag">SQL</span><span class="tag">DBeaver</span></dd>
+      <dt>Инструменты</dt>
+      <dd><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">TestRail</span><span class="tag">Chrome DevTools</span><span class="tag">Charles Proxy</span><span class="tag">GitLab</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Figma</span></dd>
+    </dl>
+  </section>
 
+  <section>
+    <h2>Образование</h2>
+    <ul>
+      <li>Кубанский государственный технологический университет, землеустройство и кадастры, 2024</li>
+    </ul>
+  </section>
 </main>
-
-<script src="script.js"></script>
 </body>
 </html>
