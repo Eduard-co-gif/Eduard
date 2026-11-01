@@ -4,112 +4,235 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Эдуард Данилов — Manual QA Engineer</title>
-<meta name="description" content="Manual QA Engineer — Эдуард Данилов. Функциональное, регрессионное и API-тестирование веб-приложений. Краснодар.">
+<meta name="description" content="Эдуард Данилов — Manual QA Engineer. Функциональное, регрессионное и API-тестирование веб-приложений: UI, API и база данных. Краснодар.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f7f8fa; --card:#fff; --text:#16181d; --muted:#5d6572; --line:#e3e6eb;
-    --accent:#2f6fed; --accent-soft:#e8effd;
+    --bg:#f3f5f8; --surface:#ffffff; --text:#1b2330; --muted:#5a6678; --line:#e1e6ee;
+    --navy:#14213d; --navy-2:#1d2f55; --accent:#2b6cb0; --accent-soft:#e8f0fa; --ok:#2f855a;
+    --on-navy:#e9eef7; --on-navy-muted:#a9b6cc;
   }
   @media (prefers-color-scheme: dark){
-    :root{ --bg:#0f1115; --card:#171a21; --text:#eceef2; --muted:#9aa3b2; --line:#262b35; --accent:#6c9bff; --accent-soft:#1c2740; }
+    :root{
+      --bg:#0e1420; --surface:#151d2c; --text:#e8ecf3; --muted:#9aa7bb; --line:#243049;
+      --navy:#0b1220; --navy-2:#16223a; --accent:#6fa3e0; --accent-soft:#1b2b45; --ok:#5fc08c;
+    }
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-  main{max-width:760px;margin:0 auto;padding:32px 16px 56px}
-  header{margin-bottom:24px}
-  .status{display:inline-block;font-size:13px;color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:999px;margin-bottom:12px}
-  h1{font-size:34px;line-height:1.15;margin:0}
-  .role{font-size:19px;color:var(--muted);margin:4px 0 16px}
-  .facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;padding:0;list-style:none;font-size:15px;color:var(--muted)}
-  .facts b{color:var(--text);font-weight:600}
-  .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-  .btn{display:inline-block;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--accent);color:var(--accent)}
-  .btn.primary{background:var(--accent);color:#fff}
-  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-top:16px}
-  h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
-  p{margin:0}
-  ul{margin:0;padding-left:20px}
-  li{margin:6px 0}
-  .job{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 12px;margin-bottom:10px}
-  .job strong{font-size:17px}
-  .job span{color:var(--muted);font-size:15px}
-  h3{font-size:14px;margin:16px 0 4px;color:var(--accent)}
-  .skills{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;margin:0}
-  .skills dt{color:var(--muted);font-size:15px}
-  .skills dd{margin:0}
-  .tag{display:inline-block;background:var(--accent-soft);color:var(--text);border-radius:6px;padding:1px 8px;margin:2px 4px 2px 0;font-size:14px}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--on-navy)}
+  .hero .wrap{padding-top:56px;padding-bottom:48px}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#cfe3ff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:5px 12px;border-radius:999px}
+  .badge::before{content:"";width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.25)}
+  h1{font-size:44px;line-height:1.1;margin:18px 0 6px;font-weight:700;letter-spacing:-.02em;color:#fff}
+  .role{font-size:21px;color:var(--on-navy-muted);margin:0 0 22px;font-weight:500}
+  .lead{max-width:680px;font-size:17px;color:var(--on-navy);margin:0 0 28px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-1px)}
+  button.btn{font-family:inherit;cursor:pointer;border:0;line-height:inherit}
+  .btn.primary{background:#fff;color:var(--navy)}
+  .btn.ghost{color:#fff;border:1px solid rgba(255,255,255,.35)}
+  .btn.ghost:hover{background:rgba(255,255,255,.08)}
+
+  /* Key facts strip */
+  .strip{margin-top:-30px;position:relative}
+  .strip .grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(20,33,61,.08);overflow:hidden}
+  .fact{padding:18px 20px;border-right:1px solid var(--line)}
+  .fact:last-child{border-right:0}
+  .fact b{display:block;font-size:20px;line-height:1.25;font-weight:700}
+  .fact span{font-size:13px;color:var(--muted)}
+
+  /* Layout */
+  .layout{display:grid;grid-template-columns:1fr 300px;gap:28px;padding:36px 0 64px;align-items:start}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:28px 30px;margin-bottom:24px}
+  h2{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 16px;font-weight:700}
+  h3{font-size:15px;margin:22px 0 8px;font-weight:600}
+  p{margin:0 0 12px}
+  p:last-child{margin-bottom:0}
+  ul{margin:0;padding:0;list-style:none}
+  ul.check li{position:relative;padding-left:26px;margin:9px 0}
+  ul.check li::before{content:"";position:absolute;left:3px;top:.55em;width:6px;height:11px;border:solid var(--ok);border-width:0 2px 2px 0;transform:translateY(-50%) rotate(45deg)}
+  .job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;margin-bottom:6px}
+  .job-head strong{font-size:18px}
+  .job-head .period{color:var(--muted);font-size:14px;white-space:nowrap}
+  .company{color:var(--muted);margin:0 0 14px;font-size:15px}
+
+  /* Side */
+  .side .card{padding:22px 22px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{background:var(--accent-soft);color:var(--text);border-radius:6px;padding:3px 10px;font-size:13.5px;font-weight:500}
+  .group{margin-bottom:16px}
+  .group:last-child{margin-bottom:0}
+  .group h3{margin:0 0 8px;font-size:13px;color:var(--muted);font-weight:600}
+  .contact a{display:block;text-decoration:none;color:var(--text);padding:8px 0;border-bottom:1px solid var(--line);font-size:15px;word-break:break-all}
+  .contact a:last-child{border-bottom:0}
+  .contact small{display:block;color:var(--muted);font-size:12px}
+  .contact a:hover{color:var(--accent)}
+  .edu strong{display:block;font-size:15px}
+  .edu span{color:var(--muted);font-size:14px}
+
+  footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center;padding:20px}
+
+  @media (max-width:880px){
+    .layout{grid-template-columns:1fr}
+    .strip .grid{grid-template-columns:repeat(2,1fr)}
+    .fact:nth-child(2){border-right:0}
+    .fact:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  }
   @media (max-width:560px){
-    h1{font-size:28px}
-    .skills{grid-template-columns:1fr;gap:2px}
-    .skills dd{margin-bottom:10px}
+    h1{font-size:32px}
+    .role{font-size:18px}
+    .hero .wrap{padding-top:40px}
+    .card{padding:22px 18px}
+    .cta .btn{flex:1;text-align:center}
+  }
+  @media print{
+    body{background:#fff}
+    .hero{background:#fff;color:#000;border-bottom:2px solid #000}
+    h1,.role,.lead{color:#000}
+    .cta,.badge{display:none}
+    .card,.strip .grid{box-shadow:none;break-inside:avoid}
   }
 </style>
 </head>
 <body>
-<main>
-  <header>
-    <span class="status">Открыт к предложениям</span>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">Открыт к предложениям</span>
     <h1>Эдуард Данилов</h1>
     <p class="role">Manual QA Engineer</p>
-    <ul class="facts">
-      <li><b>Краснодар</b></li>
-      <li>Удалённо / офис</li>
-      <li>Полная занятость</li>
-      <li>Опыт <b>3 года</b></li>
-    </ul>
+    <p class="lead">Тестирую веб-приложения на трёх уровнях: интерфейс, API и база данных. Нахожу дефекты, определяю их причину и описываю так, чтобы разработчику было понятно, что исправлять.</p>
     <div class="cta">
-      <a class="btn primary" href="mailto:eduard-danilov-1999@mail.ru">Написать на email</a>
-      <a class="btn" href="https://t.me/Eduard7522">Telegram</a>
+      <button class="btn primary" type="button" data-copy="eduard-danilov-1999@mail.ru">Скопировать email</button>
+      <a class="btn ghost" href="https://t.me/Eduard7522">Telegram</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section>
-    <h2>Кратко</h2>
-    <p>Функциональное, регрессионное и API-тестирование веб-приложений. Проверяю не только интерфейс, но и API и базу данных, поэтому точнее нахожу причину дефекта. Работаю в Postman, Swagger, DevTools и SQL. Пишу понятные баг-репорты.</p>
-  </section>
-
-  <section>
-    <h2>Опыт</h2>
-    <div class="job">
-      <strong>Manual QA Engineer · B2B Corporate Finance Platform</strong>
-      <span>июнь 2023 — июнь 2026 · 3 года</span>
+<div class="strip">
+  <div class="wrap">
+    <div class="grid">
+      <div class="fact"><b>3 года</b><span>опыта в тестировании</span></div>
+      <div class="fact"><b>UI · API · БД</b><span>проверяю на всех уровнях</span></div>
+      <div class="fact"><b>Краснодар</b><span>готов к редким командировкам</span></div>
+      <div class="fact"><b>Удалённо / офис</b><span>полная занятость</span></div>
     </div>
-    <ul>
-      <li>Функциональное и регрессионное тестирование сценариев, форм и бизнес-логики.</li>
-      <li>API-тестирование в Postman и Swagger: REST, HTTP-статусы, позитивные и негативные сценарии.</li>
-      <li>Проверка данных и результатов операций через SQL.</li>
-      <li>Анализ запросов и ошибок в Chrome DevTools и Charles Proxy.</li>
-      <li>Тест-кейсы, чек-листы, баг-репорты, ретест и регресс после исправлений.</li>
-      <li>Проверка прав разных ролей на уровне UI и REST API.</li>
-    </ul>
-    <h3>Результаты</h3>
-    <ul>
-      <li>Проверяю функциональность сразу на трёх уровнях: UI, API и БД.</li>
-      <li>Локализую дефекты между клиентской и серверной частью с помощью Postman, DevTools и SQL.</li>
-      <li>Проверял критичные сценарии: валидацию данных, обработку ошибочных запросов, контроль прав доступа.</li>
-    </ul>
-  </section>
+  </div>
+</div>
 
-  <section>
-    <h2>Навыки</h2>
-    <dl class="skills">
-      <dt>Тестирование</dt>
-      <dd><span class="tag">функциональное</span><span class="tag">регрессионное</span><span class="tag">smoke</span><span class="tag">UI</span><span class="tag">API / REST</span></dd>
-      <dt>API</dt>
-      <dd><span class="tag">Postman</span><span class="tag">Swagger / OpenAPI</span><span class="tag">JSON</span><span class="tag">HTTP</span></dd>
-      <dt>Данные</dt>
-      <dd><span class="tag">SQL</span><span class="tag">DBeaver</span></dd>
-      <dt>Инструменты</dt>
-      <dd><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">TestRail</span><span class="tag">Chrome DevTools</span><span class="tag">Charles Proxy</span><span class="tag">GitLab</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Figma</span></dd>
-    </dl>
-  </section>
+<main class="wrap">
+  <div class="layout">
 
-  <section>
-    <h2>Образование</h2>
-    <ul>
-      <li>Кубанский государственный технологический университет, землеустройство и кадастры, 2024</li>
-    </ul>
-  </section>
+    <div>
+      <section class="card" id="about">
+        <h2>О себе</h2>
+        <p>Manual QA Engineer. Занимаюсь функциональным, регрессионным и API-тестированием веб-приложений. Проверяю не только интерфейс, но и взаимодействие с API и базой данных: так проще найти, где именно возникла проблема.</p>
+        <p>Анализирую требования, подбираю проверки под бизнес-логику и оформляю понятные баг-репорты. В работе ценю системный подход, внимательность к деталям и ясную коммуникацию с командой.</p>
+      </section>
+
+      <section class="card" id="experience">
+        <h2>Опыт работы</h2>
+        <div class="job-head">
+          <strong>Manual QA Engineer</strong>
+          <span class="period">июнь 2023 — июнь 2026 · 3 года</span>
+        </div>
+        <p class="company">B2B Corporate Finance Platform · веб-платформа для корпоративных пользователей</p>
+
+        <h3>Чем занимался</h3>
+        <ul class="check">
+          <li>Функциональное и регрессионное тестирование пользовательских сценариев, форм и бизнес-логики.</li>
+          <li>API-тестирование в Postman и Swagger: REST-запросы и ответы, HTTP-статусы, позитивные и негативные сценарии.</li>
+          <li>Проверка данных и результатов операций с помощью SQL-запросов.</li>
+          <li>Анализ сетевых запросов и ошибок через Chrome DevTools и Charles Proxy.</li>
+          <li>Составление тест-кейсов и чек-листов, ведение тестовой документации в TestRail.</li>
+          <li>Оформление баг-репортов в Jira: шаги воспроизведения, фактический и ожидаемый результат, окружение, приоритет и серьёзность.</li>
+          <li>Ретест исправлений и регрессионные проверки затронутой функциональности.</li>
+          <li>Проверка прав пользователей разных ролей на уровне UI и REST API.</li>
+        </ul>
+
+        <h3>Результаты</h3>
+        <ul class="check">
+          <li>Выстроил комплексную проверку функциональности на уровнях UI, API и БД, поэтому выявляю расхождения не только в интерфейсе, но и в обработке и сохранении данных.</li>
+          <li>Точнее локализую причину дефекта между клиентской и серверной частью с помощью Postman, Chrome DevTools и SQL.</li>
+          <li>Проверял критичные бизнес-сценарии: валидацию данных, обработку ошибочных запросов, контроль прав доступа.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="approach">
+        <h2>Подход к работе</h2>
+        <ul class="check">
+          <li>Сначала разбираюсь в требованиях и бизнес-логике, затем определяю риски и объём проверок.</li>
+          <li>При спорном поведении не останавливаюсь на симптоме: собираю факты из интерфейса, сетевых запросов, API и базы данных.</li>
+          <li>Описываю дефекты коротко и по делу, чтобы их можно было воспроизвести с первого раза.</li>
+          <li>Спокойно работаю с большим числом однотипных проверок и сокращаю рутину за счёт готовых наборов тестов.</li>
+        </ul>
+      </section>
+    </div>
+
+    <aside class="side">
+      <section class="card contact" id="contacts">
+        <h2>Контакты</h2>
+        <a href="#" data-copy="eduard-danilov-1999@mail.ru"><small>Email · нажмите, чтобы скопировать</small>eduard-danilov-1999@mail.ru</a>
+        <a href="https://t.me/Eduard7522"><small>Telegram</small>t.me/Eduard7522</a>
+      </section>
+
+      <section class="card" id="skills">
+        <h2>Навыки</h2>
+        <div class="group"><h3>Тестирование</h3>
+          <div class="chips"><span class="chip">Функциональное</span><span class="chip">Регрессионное</span><span class="chip">Smoke</span><span class="chip">UI</span><span class="chip">Use case</span></div></div>
+        <div class="group"><h3>API</h3>
+          <div class="chips"><span class="chip">Postman</span><span class="chip">Swagger / OpenAPI</span><span class="chip">REST</span><span class="chip">HTTP</span><span class="chip">JSON</span></div></div>
+        <div class="group"><h3>Базы данных</h3>
+          <div class="chips"><span class="chip">SQL</span><span class="chip">DBeaver</span></div></div>
+        <div class="group"><h3>Инструменты</h3>
+          <div class="chips"><span class="chip">Jira</span><span class="chip">Confluence</span><span class="chip">TestRail</span><span class="chip">Chrome DevTools</span><span class="chip">Charles Proxy</span><span class="chip">GitLab</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Figma</span><span class="chip">Slack</span></div></div>
+      </section>
+
+      <section class="card edu" id="education">
+        <h2>Образование</h2>
+        <strong>Кубанский государственный технологический университет</strong>
+        <span>Землеустройство и кадастры · 2024</span>
+      </section>
+    </aside>
+
+  </div>
 </main>
+
+<footer>Эдуард Данилов · Manual QA Engineer · Краснодар</footer>
+
+<script>
+  // Копирование email: работает без настроенной почтовой программы
+  document.querySelectorAll('[data-copy]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var text = el.getAttribute('data-copy');
+      var target = el.tagName === 'BUTTON' ? el : el.querySelector('small');
+      var original = target.textContent;
+      function done() {
+        target.textContent = el.tagName === 'BUTTON' ? 'Email скопирован ✓' : 'Скопировано ✓';
+        setTimeout(function () { target.textContent = original; }, 2000);
+      }
+      function fallback() {
+        var t = document.createElement('textarea');
+        t.value = text; t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); done(); } catch (err) { window.prompt('Скопируйте email:', text); }
+        document.body.removeChild(t);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    });
+  });
+</script>
 </body>
 </html>
